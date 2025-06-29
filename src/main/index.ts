@@ -12,11 +12,11 @@ if (started) {
   app.quit();
 }
 
-import { createMainWindow, createSecondWindow } from "./window";
+
+import { createMainWindow } from "./window";
 
 const createWindow = () => {
   createMainWindow();
-  createSecondWindow();
 };
 
 // This method will be called when Electron has finished
@@ -38,7 +38,7 @@ app.on("activate", () => {
   // dock icon is clicked and there are no other windows open.
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
-  }
+  }....
 });
 
 // In this file you can include the rest of your app's specific main process
